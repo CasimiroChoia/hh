@@ -1,0 +1,55 @@
+.content {
+    max-width: 850px;
+    margin: auto;
+    text-align: justify;
+    color: darkgrey;
+    text-indent: 5%;
+    padding: 0 20px;
+}
+
+.content p {
+    margin-bottom: .5em;
+    line-height: 1.5;
+    font-size: 12pt;
+}
+
+.content h1 {
+    margin-top: 1em;
+    font-size: 24pt;
+}
+
+.social {
+    display: flex;
+    margin: auto;
+    margin-bottom: 2em;
+    width: fit-content;
+    max-width: 100dwh;
+}
+
+.social:hover a img:not(:hover) {
+    filter: grayscale(1);
+}
+
+
+.fieldset {
+    width: 90%;
+    min-width: 200px;
+    max-width: 300px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.fieldset>legend {
+    letter-spacing: nowrap;
+}
+
+.textarea {
+    min-width: 200px;
+    width: 90%;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 0 0 8px;
+    margin: 0 auto 6px;
+    display: block;
+}

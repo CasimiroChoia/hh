@@ -1,0 +1,21 @@
+.errorContent {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 4.5em;
+    min-height: 90dvh;
+
+    color: rgb(165, 0, 0);
+    font-size: 1.4em;
+    text-align: center;
+    animation: blink .8s ease-in-out infinite ;
+}
+
+
+@keyframes blink {
+    50% {
+        color: transparent;
+    }
+}

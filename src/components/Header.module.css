@@ -1,0 +1,131 @@
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.title {
+    color: white;
+    font-family: system-ui,
+        -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans',
+        'Helvetica Neue', sans-serif;
+
+    z-index: 1000;
+}
+
+/* barra de navegacao para dispositivos maiores */
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 3px 5px;
+    margin-inline: 1.5px;
+    font-size: 12pt;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 400ms 50ms ease-in-out;
+}
+
+.navbar:hover a:not(:hover),
+.navbar:focus a:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.4);
+}
+
+.hamburguer {
+    transition: all .5s ease-in-out;
+    height: 3px;
+    width: 30px;
+    border-bottom: 3px solid #fff;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 5px;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    content: "";
+    margin-bottom: -2px;
+    height: 10px;
+    width: 40px;
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+nav.hide {
+    left: -500px;
+}
+
+nav.show {
+    left: 0px;
+}
+
+.hamburguer.opened {
+    transition: all .5s ease-in-out;
+    transform: rotate(405deg);
+    
+    &::before {
+        transform: rotate(450deg) translateX(-4px) translateY(-4px);
+    }
+    
+    &::after {
+        visibility: hidden;
+    }
+}
+
+/* media 450px para dispositivos mais pequenos */
+@media (max-width:450px) {
+    .title {
+        color: #fff;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -250px;
+        right: 0;
+        transition: all .5s ease-in-out;
+        backdrop-filter: blur(50px);
+
+        width: 100dvw;
+        height: 100dvh;
+
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .navbar a {
+        width: 100%;
+        border-radius: 0;
+        padding: 1em 0;
+        text-align: center;
+        font-size: 14pt;
+        letter-spacing: 3px;
+    }
+
+    .navbar:hover a:not(:hover),
+    .navbar:focus a:not(:hover) {
+        filter: blur(0px);
+        transform: scale(1);
+    }
+}
+
+
+
+@media (min-width:451px) {
+    .hamburguer {
+        display: none;
+    }
+
+}

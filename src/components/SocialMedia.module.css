@@ -1,0 +1,33 @@
+.media {
+    margin:1em 1.5% 0;
+    text-decoration: none;
+    text-align: center;
+
+    width: fit-content;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.media img {
+    width: 80%;
+    max-width: 100px;
+    transition: all .3s ease-in-out;
+    
+    &:hover {
+        margin: 0 1em;
+        transform:rotate(720deg);
+        filter: grayscale(0);
+    }
+
+}
+
+.label {
+    color: black;
+    letter-spacing: 1.3px;
+    font-weight: 100;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

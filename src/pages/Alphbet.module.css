@@ -1,0 +1,46 @@
+.detail {
+    display: block;
+    margin: 1.5rem auto;
+    padding: 0 10% 1em;
+    border-radius: 20px;
+    background-color: #ffffff17;
+
+
+    transform: translateY(20px);
+    opacity: 0;
+    animation: aparecer .5s ease-in-out var(--timing) forwards;
+}
+
+.inicial {
+    display: block;
+    margin: 3px -8%;
+    padding: .5em 0;
+    color: aliceblue;
+    font-size: 1.5em;
+    cursor: pointer;
+
+
+    &::before {
+        content: '> ';
+    }
+}
+
+.content {
+    /* padding: 0 1.5em 0 -.5em; */
+    padding: 0 1.5em;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+@keyframes aparecer {
+    to {
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+}

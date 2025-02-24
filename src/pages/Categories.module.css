@@ -1,0 +1,36 @@
+.categories {
+    display: flex;
+    align-items: center;
+    flex: 1 0 auto;
+    gap: .5em;
+    margin: auto;
+    width: fit-content;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    text-transform: capitalize;
+    color: #fff;
+    flex-flow: row nowrap;
+
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.catContainer {
+    padding-top: 2em;
+    min-height: 50dvh;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 auto;
+    flex-flow: column wrap;
+    gap: 10px;
+
+
+    /* background-color: bisque; */
+}
